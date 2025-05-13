@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+    <style>
+      body {
+        background-color:rgb(199, 207, 121);
+      }
+      form {
+        max-width: 400px;
+        margin: 20px auto;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 16px;
+        box-sizing: border-box;
+        background-color: aqua;
+      }
+
+      input[type="button"] {
+        background-color: chocolate;
+
+        color: black;
+        padding: 12px;
+        border: none;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <form method="post">
+      A: <input type="text" id="box1" /><br />
+      B: <input type="text" id="box2" /><br />
+      Value: <input type="text" id="box3" /><br />
+
+      <input type="button" value="+" onclick="Add()" />
+      <input type="button" value="-" onclick="Sub()" /><br />
+      <input type="button" value="*" onclick="Mult()" />
+      <input type="button" value="/" onclick="Div()" /><br />
+    </form>
+    <script src="function.js"></script>
+  </body>
+</html>

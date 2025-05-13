@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Login Form</title>
+        <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ecf0f3;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: linear-gradient(45deg, #3498db, #8e44ad);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);    
+            width: 350px;
+            text-align: center;
+            color: #fff;
+        }
+
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        .error-message {
+            color: #e74c3c;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        button {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+            color: #fff;
+            padding: 12px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            font-size: 16px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        button:hover {
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+        }
+        alert {
+            color: red;
+        }
+    </style>
+    </head>
+    <body>
+
+        <div class="login-container">
+            <h2>Login</h2>
+            <form id="loginForm" onsubmit="return validateForm()" method="post">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="text" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="error-message" id="errorMessage"></div>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+
+        <script>
+    function validateForm() {
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var phone = document.getElementById('phone').value;
+        var errorMessage = document.getElementById('errorMessage');
+
+     
+        function isNumeric(str) {
+                return /^[0-9]+$/.test(str);
+        }
+        if (username === '' || email === '' || password === '') {
+            errorMessage.innerHTML = 'All fields are required.';
+            setTimeout(function(){
+                errorMessage.innerText = '';
+                }, 2500);
+            return false;
+        }
+
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email)) {
+            // errorMessage.innerHTML = 'Enter a valid email address.';
+            alert('Enter a valid email address.');
+            return false;
+        }
+
+        if(phone.length<10 || phone.lenght>10)
+        {
+            errorMessage.innerHTML = 'Phone field is not of 10 digits.';
+            setTimeout(function(){
+                errorMessage.innerText = '';
+                }, 2800);
+                return false;
+        }
+        if(!isNumeric(phone))
+        {
+           alert('Phone field is not consist digits.');
+           return false;
+        
+        }
+        // Clear error message if validation passes
+        errorMessage.innerHTML = '';
+
+        if(password=='asd')
+        {
+            location.href="http://127.0.0.1:5500/Assignment%204/greet.html";
+        }else
+        {
+            alert('Password is incorrect.');
+            return false;
+        }
+  
+    }
+</script>
+
+    </body>
+</html>

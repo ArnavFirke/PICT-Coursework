@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employees.dtd">
+<?xml-stylesheet type="text/xsl" href="style.xsl"?>
+<employees>
+    <employee id="A101">
+        <name>Arnav Firke</name>
+        <position>HR</position>
+        <department>Recruitment</department>
+        <salary>9540000</salary>
+    </employee>
+    <employee id="F46">
+        <name>John Dae</name>
+        <position>Engineer</position>
+        <department>CE</department>
+        <salary>600000</salary>
+    </employee>
+    <employee id="D78">
+        <name>Swaraj Patil</name>
+        <position>Developer</position>
+        <department>Fronted</department>
+        <salary>45000</salary>
+    </employee>
+    <employee id="K89">
+        <name>Rahul Patil</name>
+        <position>Developer</position>
+        <department>Fronted</department>
+        <salary>45000</salary>
+    </employee>
+</employees>

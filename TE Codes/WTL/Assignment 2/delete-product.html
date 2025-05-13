@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+       body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    text-align: center;
+    padding: 1em;
+}
+
+nav {
+    background-color: #34495e;
+    padding: 0.5em;
+}
+
+nav a {
+    color: #ecf0f1;
+    text-decoration: none;
+    padding: 0.5em;
+    margin-right: 1em;
+}
+
+section {
+    padding: 1em;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+}
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Inventory Management System</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="add-product.html">Add Product</a>
+        <a href="view-product.html">View Product</a>
+        <a href="delete-product.html">Delete Product</a>
+    </nav>
+    <section>
+        <h2>Delete Product</h2>
+        <form>
+            <label for="productId">Product ID:</label>
+            <input type="text" id="productId" name="productId" required>
+
+            <button type="submit">Delete Product</button>
+        </form>
+    </section>
+</body>
+</html>
